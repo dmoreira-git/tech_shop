@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tech_shop/pages/homepage.dart';
 
 class Loginpage extends StatelessWidget{
   const Loginpage({super.key});
@@ -11,12 +12,15 @@ class Loginpage extends StatelessWidget{
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 25),
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
 
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Image.asset('lib/images/tech_store_logo.png', height: 240),
               ),
+
+              const SizedBox(height: 48,),
 
               const Text(
                 'Hardware Sales and Repairs',
@@ -42,7 +46,7 @@ class Loginpage extends StatelessWidget{
                 onTap: () => Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => Loginpage()
+                      builder: (context) => HomePage()
                     )
                 ),
                 child: Container(
